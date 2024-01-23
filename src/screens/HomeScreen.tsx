@@ -1,24 +1,26 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import LinearGradient from 'react-native-linear-gradient'
-import { Colors } from '../types/constants';
+import moment from 'moment';
+import WeatherCurrent from '../Components/WeatherCurrent';
+import WeatherCoordinates from '../Components/WeatherCoordinates';
 
 export default function HomeScreen() {
+    const now = moment();
   return (
-    <LinearGradient 
-    colors={[Colors.LIGHT_GRAY, Colors.DARKER_GRAY]} 
-    testID='homeScreen' 
-    className='flex-1 px-[40] content-between justify-evenly'
-    >
-        <View >
-            <View >
-                <Text>AAAAAAAAAAAAAAAA</Text>
-                <Text>AAAAAAAAAAAAAAAA</Text>
-                <Text>AAAAAAAAAAAAAAAA</Text>
-                <Text>AAAAAAAAAAAAAAAA</Text>
-                <Text>AAAAAAAAAAAAAAAA</Text>
-            </View>
+    <View 
+    testID='homeScreen'
+    className='flex-1 px-[40] content-between justify-evenly  ' >
+        <View className='content-end '>
+            <Text className='font-extrabold text-2xl'>
+                {now.format('MMM DD, YYYY')}
+            </Text>
+            <Text className='font-extrabold'>
+                {now.format('dddd')}
+            </Text>
         </View>
-    </LinearGradient>
+        <WeatherCurrent />
+        <WeatherCoordinates />
+        <Text testID='mock-screen-divider' className='text-center'>Or</Text>
+    </View>
   )
 }

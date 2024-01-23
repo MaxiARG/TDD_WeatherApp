@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/jest": "^29.5.11",
     "axios": "^1.6.5",
+    "moment": "^2.30.1",
     "nativewind": "^4.0.23",
     "react": "18.2.0",
     "react-native": "0.73.2",
