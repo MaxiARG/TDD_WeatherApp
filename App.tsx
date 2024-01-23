@@ -1,12 +1,13 @@
+import "./global.css"
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
-import QuestionsBoard from './src/components/ComponenteFacil_TDD';
+import HomeScreen from "./src/screens/HomeScreen";
 
 function App(): React.JSX.Element {
 
   return (
-    <SafeAreaView>
-        <Text>App.tsx</Text>
+    <SafeAreaView testID='rootApp' className="flex-1">
+      <HomeScreen />
     </SafeAreaView>
   );
 }
