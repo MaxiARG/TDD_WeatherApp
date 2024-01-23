@@ -14,7 +14,7 @@ describe('Test WeatherCurrent', () => {
   })
   it('Se monta correctamente.', () => {
         const weather = render(<WeatherCurrent />);
-        expect(weather.getByText('WeatherCurrent')).toBeTruthy()
+        weather.getByTestId('mock-weather-current');
   });
 
 

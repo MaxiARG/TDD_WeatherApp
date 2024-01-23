@@ -12,7 +12,7 @@ describe('Test WeatherCoordinates', () => {
   })
   it('Se monta correctamente.', () => {
         const coord = render(<WeatherCoordinates />);
-        expect(coord.getByText('WeatherCoordinates')).toBeTruthy()
+        coord.getByTestId('mock-weather-coordinates')
   });
 
 
