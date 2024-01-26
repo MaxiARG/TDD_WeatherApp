@@ -5,11 +5,7 @@ import {it} from '@jest/globals';
 import WeatherCoordinates from '../WeatherCoordinates';
 
 describe('Test WeatherCoordinates', () => {
-  beforeEach(() => {
-  })
 
-  afterEach(()=>{
-  })
   it('Se monta correctamente.', () => {
         const coord = render(<WeatherCoordinates />);
         coord.getByTestId('mock-weather-coordinates')

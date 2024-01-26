@@ -5,11 +5,14 @@ import {it} from '@jest/globals';
 import HomeScreen from '../HomeScreen';
 import WeatherCurrent from '../../Components/WeatherCurrent';
 import WeatherCoordinates from '../../Components/WeatherCoordinates';
+
 import { View } from 'react-native';
+
 jest.mock('../../Components/WeatherCoordinates', () => jest.fn().mockReturnValue(null));
 jest.mock('../../Components/WeatherCurrent', () => jest.fn().mockReturnValue(null));
 
 describe('Test HomeScreen', () => {
+  
   beforeEach(() => {
     jest.useFakeTimers('modern');
     jest.setSystemTime(new Date('2000-01-01T00:00:00')); //Luego de hacer esto, puedo leer el date con new Date y sera el seteado por jest
@@ -35,13 +38,17 @@ describe('Test HomeScreen', () => {
 
   it('Debe contener weather Current', () => {
     //Los mockeo porque no quiero testear su funcionalidad. Solo quiero testear HomeScreen.
-    (WeatherCurrent as jest.Mock).mockReturnValue(<View testID='mock-weather-current'/>);
+    const MockWeatherCurrent = WeatherCurrent as jest.Mock;
+    const ComponenteQueRetorna = <View testID='mock-weather-current'/>;
+    MockWeatherCurrent.mockReturnValue(ComponenteQueRetorna);
     const w = render(<HomeScreen />);
     w.getByTestId('mock-weather-current')
   });
 
   it('Debe contener weather Coordinates', () => {
-    (WeatherCoordinates as jest.Mock).mockReturnValue(<View testID='mock-weather-coordinates'/>);
+    const MockWeatherCoordinates = WeatherCoordinates as jest.Mock;
+    const ComponenteQueRetorna = <View testID='mock-weather-coordinates'/>;
+    MockWeatherCoordinates.mockReturnValue(ComponenteQueRetorna);
     const w = render(<HomeScreen />);
     w.getByTestId('mock-weather-coordinates')
   });

@@ -7,15 +7,13 @@ import WeatherCurrent from '../WeatherCurrent';
 // require("react-native-reanimated/lib/reanimated2/jestUtils").setUpTests();
 
 describe('Test WeatherCurrent', () => {
-  beforeEach(() => {
-  })
 
-  afterEach(()=>{
-  })
   it('Se monta correctamente.', () => {
         const weather = render(<WeatherCurrent />);
         weather.getByTestId('mock-weather-current');
   });
+
+  it.todo('Debe navegar a la screen Weather con la ubicacion');
 
 
 })

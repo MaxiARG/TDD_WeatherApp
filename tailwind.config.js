@@ -6,7 +6,10 @@ module.exports = {
   theme:{
     extend:{
       colors:{
-        miColor: '#123423'
+        WHITE: '#ffffff',
+        LIGHT_GRAY: '#484B4B',
+        GRAY: '#5D6972',
+        DARKER_GRAY: '#2C2D35',
       }
     }
 
