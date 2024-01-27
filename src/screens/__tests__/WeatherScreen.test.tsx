@@ -6,7 +6,7 @@ import WeatherScreen from '../WeatherScreen';
 
 
 describe('Test WeatherScreen', () => {
-  it('Debe renderizar HomeScreen por defecto', async () => {
+  it('Debe renderizar WeatherScreen', async () => {
     const w = render(<WeatherScreen />);
     w.getByTestId('mock-weather-screen')
   })

@@ -14,7 +14,7 @@ export default function HomeScreen() {
             <Text className='font-extrabold text-2xl'>
                 {now.format('MMM DD, YYYY')}
             </Text>
-            <Text className='font-extrabold'>
+            <Text className='font-extrabod'>
                 {now.format('dddd')}
             </Text>
         </View>

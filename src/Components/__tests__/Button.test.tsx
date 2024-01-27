@@ -3,6 +3,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react-native';
 import {it} from '@jest/globals';
 import Button from '../Button';
+
 describe('Test Button', () => {
 
   it('Se monta correctamente.', () => {
@@ -26,7 +27,7 @@ describe('Test Button', () => {
     it('Debe renderizar el label', () => {
         const onPressMocked = jest.fn();
         const w = render(<Button label='labelTest' onPress={onPressMocked} />);
-        w.getByLabelText('labelTest');
+        w.getByText('labelTest');
     });
 
     it('Debe aceptar View Props customs (testID por ejemplo)', () => {

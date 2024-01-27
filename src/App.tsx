@@ -1,6 +1,5 @@
 import '../global.css'
 import React from 'react';
-import { View } from 'react-native-reanimated/lib/typescript/Animated';
 import AppNavigator from './screens/AppNavigator';
 
 function App(): React.JSX.Element {

@@ -42,7 +42,7 @@ describe('Test AppNavigator', () => {
     //3- Comienzo a crear la renderizacion
     const w = render(<AppNavigator/>);
 
-    //4- testeo si existe en AppNavigator tree
+    //4- testeo si existe en AppNavigator tree. Lo que significa que Home se creó e inmediatamente navegó a Weather.
     await waitFor(() => {
       w.getByTestId('weather-mock-screen')
     })
