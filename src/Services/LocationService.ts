@@ -7,7 +7,9 @@ export default class LocationService {
         return GetLocation.getCurrentPosition({
             enableHighAccuracy: true,
             timeout: 15000,
-        }).then(({latitude, longitude}) => ({latitude, longitude}) );
+        })
+        .then(({latitude, longitude}) => ({latitude, longitude}) )
+
     }
     
 }

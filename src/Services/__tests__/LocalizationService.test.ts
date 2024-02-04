@@ -5,12 +5,6 @@ import LocationService from "../LocationService";
 import {it} from '@jest/globals';
 describe('Test LocalizationService', () => {
 
-  beforeEach(() => {
-  })
-
-  afterEach(()=>{
-  })
-
   it('Debe devolver lat y long de la posicion actual', async () => {
     const position = await LocationService.getCurrentPosition();
     expect(position).toEqual({

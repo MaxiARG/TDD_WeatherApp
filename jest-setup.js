@@ -25,10 +25,3 @@ import 'react-native-gesture-handler/jestSetup';
 
 jest.mock('react-native-linear-gradient', () => 'LinearGradient');// LinearGradient es el nombre del componente que se usa en HomeScreen
 
-
-// const BOGUS_UNMOUNTED_ERROR = (
-//   "Got a component with the name 'mockConstructor' for the screen"
-// );
-// const originalError = console.error.bind(console.error);
-// console.error = (...args) => !args.toString().includes(BOGUS_UNMOUNTED_ERROR)
-//   && originalError(...args);

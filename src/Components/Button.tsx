@@ -14,11 +14,14 @@ export default function Button(props: Props) {
 
   return (
     <TouchableOpacity testID='button' onPress={onPress} > 
-      <LinearGradient {...others} colors={[Colors.LIGHTER_GRAY, Colors.DARK_GRAY]} className='border-r-2 px-3 py-4 justify-center items-center' >
+      <LinearGradient {...others} colors={[Colors.LIGHTER_GRAY, Colors.DARK_GRAY]} className='border-r-2 px-3 py-4 justify-center items-center'
+      style={style}
+       >
         {
         loading ? (<ActivityIndicator size={24} color={Colors.WHITE} testID='button-loading'/>) 
         : 
-        <Text className='size-7 color-white'>{label}</Text>}
+        <Text className='size-5 w-full text-center color-white'>{label}</Text>
+        }
       </LinearGradient>
     </TouchableOpacity>
   )
