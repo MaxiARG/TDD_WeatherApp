@@ -128,13 +128,13 @@ describe('Error', () => {
       fireEvent.press(b);
       
       await waitFor(() => {
-        w.debug()
+        // w.debug()
         expect(b).toHaveStyle({borderColor: Colors.ERROR});
       },{timeout:5000})
 
   }, 5000);
 
-  
+  //Video 22 al fiunal
   it('Debe resetearse luego de solicitar Position de nuevo. NO FUNCIONA COMO SE ESPERA', async () => {
     jest.spyOn(LocationService, 'getCurrentPosition')
     .mockRejectedValueOnce(new Error(''));

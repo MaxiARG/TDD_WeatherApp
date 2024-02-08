@@ -25,3 +25,6 @@ import 'react-native-gesture-handler/jestSetup';
 
 jest.mock('react-native-linear-gradient', () => 'LinearGradient');// LinearGradient es el nombre del componente que se usa en HomeScreen
 
+ // @ts-ignore
+global.window = {};
+global.window = global;

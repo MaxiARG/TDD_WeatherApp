@@ -8,7 +8,7 @@ import WeatherScreen from '../WeatherScreen';
 describe('Test WeatherScreen', () => {
   it('Debe renderizar WeatherScreen', async () => {
     const w = render(<WeatherScreen />);
-    w.getByTestId('mock-weather-screen')
+    w.getByTestId('weather-screen')
   })
 
 

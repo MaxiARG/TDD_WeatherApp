@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function WeatherScreen() {
   return (
-    <View testID='mock-weather-screen'>
+    <View testID='weather-screen'>
       <Text>WeatherScreen</Text>
     </View>
   )

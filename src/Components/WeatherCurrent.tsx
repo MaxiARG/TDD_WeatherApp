@@ -15,22 +15,16 @@ export default function WeatherCurrent() {
     setLoading(true);
     try{
       let position = await LocationService.getCurrentPosition();
-      console.log(position);
       //  throw new Error('error')
       setError(false);
       navigation.navigate('Weather', position);
     } catch(e) {
-      console.log("entro en catcha " + e)
       setError(true);
     }
 
     setLoading(false);
 
   }, [navigation]);
-
-  useEffect(()=>{
-    console.log("ERROR VALE " + error);
-  }, [error]);
   
   return (
     <Button 

@@ -9,7 +9,7 @@ export default function HomeScreen() {
   return (
     <View 
     testID='homeScreen'
-    className='flex-1 px-[40] content-between justify-evenly  ' >
+    className='flex-1 px-[40] content-between justify-evenly bg-slate-600 ' >
         <View className='content-end '>
             <Text className='font-extrabold text-2xl'>
                 {now.format('MMM DD, YYYY')}
