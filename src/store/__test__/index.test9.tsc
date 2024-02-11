@@ -1,0 +1,19 @@
+
+import {it} from '@jest/globals';
+import { render } from '../../utils/test.utils';
+import { View } from 'react-native';
+import store from '..';
+
+describe.skip('Store', () => {
+
+  it('Debe ser un store valido', async () => {
+        const w = render(<View testID='mock-component'></View>, {store})
+        w.getByTestId('mock-component');
+  });
+
+  it('Debe renderizar un Provider', async () => {
+    const w = render(<View testID='mock-component'></View>, {store})
+    w.getByTestId('mock-component');
+});
+
+});
