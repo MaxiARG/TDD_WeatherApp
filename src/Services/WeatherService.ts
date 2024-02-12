@@ -27,7 +27,7 @@ class WeatherService {
                 {
                     lat,
                     lon,
-                    appid: 'eea2860607df20d73edc49990b46c89a',
+                    appid: 'abc',
                     units: 'metric'
                 }
             }
