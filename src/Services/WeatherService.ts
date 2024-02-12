@@ -2,8 +2,6 @@ import axios, { AxiosResponse } from "axios";
 import { WeatherType, nullWeather } from "../types/Weather";
 import { CurrentWeatherRawResponseDto, nullCurrentWeatherRawResponse } from "./dto/weatherService.dto";
 
-// key: eea2860607df20d73edc49990b46c89a
-
 class WeatherService {
 
     static async formatCurrentWeatherResponse(response: AxiosResponse<CurrentWeatherRawResponseDto>){
